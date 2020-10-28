@@ -1,0 +1,69 @@
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import { Server } from "miragejs";
+
+new Server({
+  routes() {
+    this.get("/issue/forms", () => {
+      return [
+        {
+          "purpose": "Sexual Abuse",
+          "id": "552tgvvg",
+          "input" : [
+            {
+              label: 'What is the name of the offender',
+              type: 'text'
+            },
+            {
+              label: 'When was the date of the incident?',
+              type: 'date'
+            },
+          ]
+        },
+        {
+          "purpose": "Bribery",
+          "id": "552thyh7g",
+          "input": [
+            {
+              label: 'What is the name of the officer in question?',
+              type: 'text',
+            },
+            {
+              label: 'When was the date of the incident?',
+              type: 'date',
+            },
+            {
+              label: 'How much is the bribe that was paid? (optional)',
+              type: 'number',
+            }
+          ]
+        },
+        {
+          "purpose": "Police Brutality",
+          "id": "552thyh7567g",
+          "input": [
+            {
+              label: 'What is the name of the officer in question?',
+              type: 'text',
+            },
+            {
+              label: 'When was the date of the incident?',
+              type: 'date',
+            },
+            {
+              label: 'How much is the bribe that was paid? (optional)',
+              type: 'number',
+            }
+          ]
+        }
+      ]
+    })
+  }
+})
+
+createApp(App)
+  .use(store)
+  .use(router)
+  .mount("#app");
