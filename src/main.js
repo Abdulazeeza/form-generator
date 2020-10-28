@@ -9,6 +9,58 @@ new Server({
     this.get("/issue/forms", () => {
       return [
         {
+          "purpose": "propono",
+          "id": "t6r56fhhhyyt",
+          "input" : [
+            {
+              label: 'Your full name',
+              type: 'text'
+            },
+            {
+              label: 'Age',
+              type: 'number'
+            },
+            {
+              label: 'country',
+              type: 'text'
+            },
+            {
+              label: 'state',
+              type: 'text'
+            },
+            {
+              label: "date",
+              type: "date"
+            },
+            {
+              label: "Complain",
+              type: "textarea"
+            }
+          ]
+        },
+        {
+          "purpose": "Corruption",
+          "id": "t6r56fyyt",
+          "input" : [
+            {
+              label: 'Name of Politician',
+              type: 'text'
+            },
+            {
+              label: 'Job position of govenment',
+              type: 'text'
+            },
+            {
+              label: 'language',
+              type: 'text'
+            },
+            {
+              label: 'Your Phone number',
+              type: 'tel'
+            },
+          ]
+        },
+        {
           "purpose": "Sexual Abuse",
           "id": "552tgvvg",
           "input" : [

@@ -26,7 +26,7 @@
 
         <!-- submit section -->
         <div class="text-center" v-show="submitted_form">
-            <button class="btn" @click.prevent="see_submission">View Submission</button>
+            <button class="btn" @click.prevent="see_submission">View Recent Submission</button>
         </div>
 
         <!-- result for submission -->
