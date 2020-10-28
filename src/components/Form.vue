@@ -17,7 +17,7 @@ export default {
         ...mapState({
             selected_form: state => state.form.selected_form
         }),
-        computed_input () { 
+        computed_input () {  //get the form data on update
             let input_names = {}
             let name = null 
             for (let index = 0; index < this.selected_form.input.length; index++) {
@@ -28,7 +28,7 @@ export default {
         }
     },
     methods: {
-        submit_form() {
+        submit_form() { //submit form
             let submission = [];
            
             for (let index = 0; index < this.selected_form.input.length; index++) {
